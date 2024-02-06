@@ -1,13 +1,6 @@
 import "routing.nkpl"
 
--- Confirm two forwarding loops noted in HSA paper
-check @switch=coza⋅routing⋅topo⋅δ⋅(routing⋅topo⋅δ)⋆⋅@switch=coza ≢ ∅
-check @switch=goza⋅routing⋅topo⋅δ⋅(routing⋅topo⋅δ)⋆⋅@switch=goza ≢ ∅
-
-
--- Check reachability of All OZ switches from Backbone
-check @switch=coza⋅(routing⋅topo⋅δ)⋆⋅@switch=coza ≢ ∅
-
+-- Check reachability of backbone from OZ routers
 check @switch=boza⋅(routing⋅topo⋅δ)⋆⋅(@switch=bbra ∪ @switch=bbrb) ≢ ∅
 check @switch=bozb⋅(routing⋅topo⋅δ)⋆⋅(@switch=bbra ∪ @switch=bbrb) ≢ ∅
 check @switch=coza⋅(routing⋅topo⋅δ)⋆⋅(@switch=bbra ∪ @switch=bbrb) ≢ ∅
@@ -21,4 +14,3 @@ check @switch=rozb⋅(routing⋅topo⋅δ)⋆⋅(@switch=bbra ∪ @switch=bbrb) 
 check @switch=soza⋅(routing⋅topo⋅δ)⋆⋅(@switch=bbra ∪ @switch=bbrb) ≢ ∅
 check @switch=sozb⋅(routing⋅topo⋅δ)⋆⋅(@switch=bbra ∪ @switch=bbrb) ≢ ∅
 check @switch=yoza⋅(routing⋅topo⋅δ)⋆⋅(@switch=bbra ∪ @switch=bbrb) ≢ ∅
--- check @switch=yozb⋅(routing⋅topo⋅δ)⋆⋅(@switch=bbra ∪ @switch=bbrb) ≢ ∅

@@ -1,0 +1,4 @@
+import "routing.nkpl"
+
+-- Print packets that hit the forwarding loop
+print backward @switch=coza⋅routing⋅topo⋅δ⋅(routing⋅topo⋅δ)⋆⋅@switch=coza

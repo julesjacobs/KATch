@@ -121,7 +121,7 @@ object Bisim {
     val start = System.nanoTime()
     val y = f
     val end = System.nanoTime()
-    println(f"  $msg: ${(end - start) / 1000.0}%.2f μs")
+    //println(f"  $msg: ${(end - start) / 1000.0}%.2f μs")
     y
   }
 

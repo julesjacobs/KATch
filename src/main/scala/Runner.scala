@@ -95,7 +95,8 @@ object Runner {
         runFile(env, path3)
       case Stmt.Print(e) =>
         val v = eval(env, e)
-        println(s"Print at $path:${line + 1}: ${summarize(v)}")
+        //println(s"Print at $path:${line + 1}: ${summarize(v)}")
+        println(v)
         env
       case Stmt.For(x, i0, i1, stmt) =>
         var env2 = env
