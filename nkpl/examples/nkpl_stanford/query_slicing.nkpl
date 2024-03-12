@@ -1,0 +1,4 @@
+import "sliced_routing.nkpl"
+
+-- Check slicing for tagged routing from a and from b routers
+check ((tagged_routing1∪tagged_routing2)⋅topo⋅δ)⋆ ≡ ((tagged_routing1)⋅topo⋅δ)⋆ ∪ ((tagged_routing2)⋅topo⋅δ)⋆

@@ -1,0 +1,9 @@
+import "routing.nkpl"
+
+in1 = @sw=boza? ∪ @sw=coza? ∪ @sw=goza? ∪ @sw=poza? ∪ @sw=roza? ∪ @sw=soza? ∪ @sw=yoza?
+
+tagged_routing1 = (@tag=0?⋅in1?⋅@tag←1 ∪ @tag=1?) ⋅ routing ⋅ (@tag←0)
+
+in2 = @sw=bozb? ∪ @sw=cozb? ∪ @sw=gozb? ∪ @sw=pozb? ∪ @sw=rozb? ∪ @sw=sozb? ∪ @sw=yozb?
+
+tagged_routing2 = (@tag=0?⋅in1?⋅@tag←2 ∪ @tag=2?) ⋅ routing ⋅ (@tag ← 0)
