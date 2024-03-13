@@ -1,9 +1,11 @@
 import "routing.nkpl"
 
 s1 = @sw=boza?∪@sw=coza?∪@sw=goza?∪@sw=poza?∪@sw=roza?∪@sw=soza?∪@sw=yoza?
+ns1 = ¬(@sw=boza?∪@sw=coza?∪@sw=goza?∪@sw=poza?∪@sw=roza?∪@sw=soza?∪@sw=yoza?)
 
-tagged_routing1 = (@tag=0?⋅s1?⋅@tag←1 ∪ @tag=1?)⋅routing⋅(s1?⋅@tag←0∪¬s1?)
+tagged_routing1 = (@tag=0?⋅s1?⋅@tag←1 ∪ @tag=1?)⋅routing⋅(s1?⋅@tag←0∪ns1?)
 
 s2 = @sw=bozb?∪@sw=cozb?∪@sw=gozb?∪@sw=pozb?∪@sw=rozb?∪@sw=sozb?∪@sw=yozb?
+ns2 = ¬(@sw=bozb?∪@sw=cozb?∪@sw=gozb?∪@sw=pozb?∪@sw=rozb?∪@sw=sozb?∪@sw=yozb?)
 
-tagged_routing2 = (@tag=0?⋅s2?⋅@tag←2 ∪ @tag=2?)⋅routing⋅(s2?⋅@tag←0∪¬s2?)
+tagged_routing2 = (@tag=0?⋅s2?⋅@tag←2 ∪ @tag=2?)⋅routing⋅(s2?⋅@tag←0∪ns2?)
